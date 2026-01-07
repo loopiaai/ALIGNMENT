@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "ALIGNMENT",
+    "slug": "ALIGNMENT",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#050506"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.alignment.protocol",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ALIGNMENT needs camera access for identity verification.",
+        "NSPhotoLibraryUsageDescription": "ALIGNMENT needs photo library access for your vault photo.",
+        "NSMicrophoneUsageDescription": "ALIGNMENT needs microphone access for voice notes.",
+        "NSLocationWhenInUseUsageDescription": "ALIGNMENT needs location to find connections near you."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#050506"
+      },
+      "package": "com.alignment.protocol",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ALIGNMENT needs camera access for identity verification."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ALIGNMENT needs photo library access for your vault photo."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "ALIGNMENT needs microphone access for voice notes."
+        }
+      ]
+    ]
+  }
+}
